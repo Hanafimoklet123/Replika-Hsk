@@ -1,4 +1,4 @@
-                                                  High-scalability keystore
+                                                      High-scalability keystore
                                                                         
 
 As of my last knowledge update in January 2022, I'm not aware of any specific cryptographic concept or system referred to as "High-scalability keystore cryptography" (HSK cryptography). It's possible that new developments or technologies have emerged since then, or that the term is specific to a certain domain or organization.
