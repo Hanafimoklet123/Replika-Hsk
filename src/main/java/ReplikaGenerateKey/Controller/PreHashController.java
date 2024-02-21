@@ -28,14 +28,6 @@ import java.util.Map;
 @RequestMapping("/hash")
 public class PreHashController {
 
-    String senderKeyStore = "src/main/resources/digitalSignature/sender_keystore.jks";
-    String receiverKeyStore = "src/main/resources/digitalSignature/receiver_keystore.jks";
-    String storeType = "JKS";
-    String senderAlias = "senderKeyPair";
-    String receiverAlias = "receiverKeyPair";
-    char[] password = "stpass123".toCharArray();
-
-
     @SneakyThrows
     @PostMapping("/validate")
     public static Boolean validate(@RequestBody Map<String, String> body) {

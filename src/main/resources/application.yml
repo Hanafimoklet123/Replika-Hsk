@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5435/replika_hsk
+    username: postgres
+    password: 1234
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+application:
+  security:
+    jwt:
+      secret-key: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+      expiration: 86400000 # a day
+      refresh-token:
+        expiration: 604800000 # 7 days
+
+keystore:
+  receiver-key-store: /jks/opt/receiver_keystore.jks
+  receiver-alias: senderKeyPair
+  receiver-password: stpass123
+  sender-key-store: /jks/opt/sender_keystore.jks
+  sender-password: stpass123
+  sender-alias: receiverKeyPair
+

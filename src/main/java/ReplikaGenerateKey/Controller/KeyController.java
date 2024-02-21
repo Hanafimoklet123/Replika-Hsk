@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
+import java.security.KeyPair;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
 import java.security.UnrecoverableKeyException;
@@ -24,8 +25,8 @@ public class KeyController {
     }
 
     @PostMapping(value = "", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public String create(@RequestBody KeyRequest request) throws NoSuchAlgorithmException, CertificateException, KeyStoreException, IOException, UnrecoverableKeyException {
-        String response = keyService.getKeyAlias(request.getAlgo(),request.getLength());
+    public String test(@RequestBody KeyRequest request)  {
+        String response = keyService.getKeyAlias();
 
         return "{\n\"keyAlias\": \""+response+"\"\n}";
     }
